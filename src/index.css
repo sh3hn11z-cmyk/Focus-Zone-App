@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --bg-main: #F8F9FC;
+    --bg-card: #FFFFFF;
+    --primary: #8B72E8;
+    --primary-text: #FFFFFF;
+    --text-heading: #20243A;
+    --text-secondary: #777D90;
+    --border-color: #E8EAF0;
+    --progress-color: #9B85F5;
+    --success-color: #55A987;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #F8F9FC;
+    color: #20243A;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars for clean light UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F9FC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8DAE5;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B6B9CB;
+}
